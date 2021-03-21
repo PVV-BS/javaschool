@@ -16,15 +16,14 @@ public class Replacer {
         Buffer = ByteBuffer.allocate(_BUFFER_CAPACITY);
     }
 
-    public void replace(InputStream inputStream, byte replacedSymbol, ConversionResultReceiver conversionResultReceiver) throws IOException {
-        // split data in Morphemes on words
+    public void replace(InputStream inputStream, byte replacedSymbol, ConversionResultReceiver conversionResultReceiver) throws IOException
+    {
         while (true)
         {
             int len = inputStream.read(Buffer.array());
             if (len <= 0)
                 break;
             int index = 0;
-            int start = 0;
             while (len > index)
             {
                 byte symbol = Buffer.get(index);
