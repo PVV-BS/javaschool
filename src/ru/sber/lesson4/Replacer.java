@@ -8,12 +8,12 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 public class Replacer {
-    private final int _BUFFER_CAPACITY = 256;
+    private final int BUFFER_CAPACITY = 256;
     private ByteBuffer Buffer;
 
     Replacer()
     {
-        Buffer = ByteBuffer.allocate(_BUFFER_CAPACITY);
+        Buffer = ByteBuffer.allocate(BUFFER_CAPACITY);
     }
 
     public void replace(InputStream inputStream, byte replacedSymbol, ConversionResultReceiver conversionResultReceiver) throws IOException
