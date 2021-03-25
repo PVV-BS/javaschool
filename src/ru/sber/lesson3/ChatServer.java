@@ -88,6 +88,6 @@ public class ChatServer implements Service, Runnable {
 
     @Override
     public short getServicePort() {
-        return Service._CHAT_SERVICE_PORT_DEFAULT;
+        return Service.CHAT_SERVICE_PORT_DEFAULT;
     }
 }
