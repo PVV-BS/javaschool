@@ -10,7 +10,7 @@ public class Main {
         chat.start();
         System.out.println("For stop of ChatServer type \"quit\"...");
         Scanner scanner = new Scanner(System.in);
-        while (chat.getIsRun())
+        while (chat.getIsRunning())
         {
             if (scanner.hasNext("quit"))
             {

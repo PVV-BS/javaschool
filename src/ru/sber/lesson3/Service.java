@@ -8,7 +8,7 @@ public interface Service {
     void start() throws SocketException;
     void pause();
     void stop();
-    boolean getIsRun();
+    boolean getIsRunning();
     int getCountClients();
     short getServicePort();
 }

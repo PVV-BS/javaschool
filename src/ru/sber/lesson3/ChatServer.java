@@ -15,10 +15,10 @@ public class ChatServer implements Service, Runnable {
 
     private int CountClients;
     private DatagramSocket ChatServer;
-    private boolean IsRun;
+    private boolean IsRunning;
     private boolean IsPaused;
     private int Port;
-    Thread thread;
+    private Thread thread;
 
 
     ChatServer(int Port) {
@@ -38,7 +38,7 @@ public class ChatServer implements Service, Runnable {
     @Override
     public void run() {
         ChatServer = new DatagramSocket(this.Port);
-        while (IsRun)
+        while (IsRunning)
         {
             try {
                 Thread.sleep(100);
@@ -55,12 +55,12 @@ public class ChatServer implements Service, Runnable {
 
     @Override
     public void start() {
-        if (IsRun) {
+        if (IsRunning) {
             if (IsPaused)
                 IsPaused = false;
             return;
         }
-        IsRun = true;
+        IsRunning = true;
         thread = new Thread(this);
         thread.start();
     }
@@ -72,12 +72,12 @@ public class ChatServer implements Service, Runnable {
 
     @Override
     public void stop() {
-        IsRun = false;
+        IsRunning = false;
     }
 
     @Override
-    public boolean getIsRun(){
-        return IsRun && !IsPaused;
+    public boolean getIsRunning(){
+        return IsRunning && !IsPaused;
     }
 
     @Override

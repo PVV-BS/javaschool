@@ -19,7 +19,7 @@ public class ServiceTest {
     public void start() throws SocketException {
         Service service = new ChatServer(1818);
         service.start();
-        assertTrue("The service is not run!", service.getIsRun());
+        assertTrue("The service is not run!", service.getIsRunning());
     }
 
     @Test
@@ -27,7 +27,7 @@ public class ServiceTest {
         Service service = new ChatServer(1819);
         service.start();
         service.pause();
-        assertFalse("The service is still run!", service.getIsRun());
+        assertFalse("The service is still run!", service.getIsRunning());
     }
 
     @Test
@@ -35,7 +35,7 @@ public class ServiceTest {
         Service service = new ChatServer(1820);
         service.start();
         service.stop();
-        assertFalse("The service is still run!", service.getIsRun());
+        assertFalse("The service is still run!", service.getIsRunning());
     }
 
     @Test
