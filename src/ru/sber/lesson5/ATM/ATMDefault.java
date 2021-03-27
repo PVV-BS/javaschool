@@ -7,22 +7,22 @@ import ru.sber.lesson5.Card.Operation;
 
 public class ATMDefault implements ATM {
 
-    private Card FCurrentCard;
+    private Card CurrentCard;
 
     // need to subscribe on events of a device
     private void EventCardInsert(Card card)
     {
-        FCurrentCard = card;
+        CurrentCard = card;
     }
 
     private void EventCardEject()
     {
-        FCurrentCard = null;
+        CurrentCard = null;
     }
 
     @Override
     public Card CurrentCard() {
-        return FCurrentCard;
+        return CurrentCard;
     }
 
     @Override
@@ -37,6 +37,6 @@ public class ATMDefault implements ATM {
 
     @Override
     public BigDecimal Balance() {
-        return FCurrentCard.AvailableCash();
+        return CurrentCard.AvailableCash();
     }
 }

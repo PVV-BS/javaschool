@@ -12,4 +12,8 @@ public interface Card {
     BigDecimal AvailableCash();
     Date EndService();
     int PinCode();
+    boolean IsCredit();
+    BigDecimal CreditLimit();
+    /* Percent on remainder or debt */
+    float Percent();
 }
