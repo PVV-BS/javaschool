@@ -9,10 +9,16 @@ public class ATMDefault implements ATM {
 
     private Card CurrentCard;
 
+    private boolean Authorization(Card card)
+    {
+        return true;
+    }
+
     // need to subscribe on events of a device
     private void EventCardInsert(Card card)
     {
-        CurrentCard = card;
+        if (Authorization(card))
+            CurrentCard = card;
     }
 
     private void EventCardEject()
