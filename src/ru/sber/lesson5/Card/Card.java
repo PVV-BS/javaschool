@@ -1,19 +1,21 @@
 package ru.sber.lesson5.Card;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 public interface Card {
-    String Number();
-    String Account();
-    String FistName();
-    String SecondName();
-    int CSV();
-    BigDecimal AvailableCash();
-    Date EndService();
-    int PinCode();
+    String GetNumber();
+    String GetAccount();
+    String GetFistName();
+    String GetSecondName();
+    int GetCSV();
+    BigDecimal GetAvailableCash();
+    LocalDate GetEndService();
+    int GetPinCode();
     boolean IsCredit();
-    BigDecimal CreditLimit();
+    BigDecimal GetCreditLimit();
+    String GetCurrencyIso();
+    int GetCurrencyCode();
     /* Percent on remainder or debt */
-    float Percent();
+    float GetPercent();
 }

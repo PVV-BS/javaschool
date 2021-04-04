@@ -8,8 +8,8 @@ import java.math.BigDecimal;
 // TODO: exceptions
 
 public interface ATM {
-    Card CurrentCard();
+    Card GetCurrentCard();
     Operation PushCash();
     Operation PullCash();
-    BigDecimal Balance();
+    String GetBalance();
 }
