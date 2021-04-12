@@ -10,26 +10,23 @@ import ru.sber.lesson5.Card.Operation;
 
 public class DefaultATM implements ATM {
 
-    private Card CurrentCard;
-
-    @Override
-    public Card GetCurrentCard() {
+    public Card getCurrentCard() {
         return CurrentCard;
     }
 
     @Override
-    public Operation PushCash() {
+    public Operation pushCash(BigDecimal summa) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public Operation PullCash() {
+    public Operation pullCash(BigDecimal summa) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public String GetBalance() {
-        return CurrentCard.GetAvailableCash().toString() + ' ' + CurrentCard.GetCurrencyIso();
+    public BigDecimal getBalance() {
+        return CurrentCard.getAvailableCash();
     }
 
     private boolean DoAuthorization (Card card)
@@ -49,5 +46,7 @@ public class DefaultATM implements ATM {
 
         CurrentCard = null;
     }
+
+    private Card CurrentCard;
 
 }
