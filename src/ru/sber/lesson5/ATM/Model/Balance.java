@@ -12,20 +12,15 @@ public class Balance {
         AvailableCash = Value;
     }
 
-    public String getCurrencyIsoCode(){
+    public CurrencyIsoCode getCurrencyIsoCode(){
         return CurrencyIsoCode;
     }
 
-    public void setCurrencyIsoCode(String Value){
+    public void setCurrencyIsoCode(CurrencyIsoCode Value){
         CurrencyIsoCode = Value;
     }
 
-    public int getCurrencyCode(){
-        return CurrencyCode;
-    }
-
     private BigDecimal AvailableCash;
-    private String CurrencyIsoCode;
-    private int CurrencyCode;
+    private CurrencyIsoCode CurrencyIsoCode;
 
 }

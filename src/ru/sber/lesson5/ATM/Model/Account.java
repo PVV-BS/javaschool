@@ -1,7 +1,6 @@
 package ru.sber.lesson5.ATM.Model;
 
 import lombok.Data;
-import ru.sber.lesson5.Card.Card;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,58 +8,54 @@ import java.util.ArrayList;
 @Data
 public class Account {
 
+    private Balance balance;
+    private int clientNumber;
+    private String account;
+    private ArrayList<Card> cards;
+    private boolean isCredit;
+    private BigDecimal creditLimit;
+    /* Percent on remainder or debt */
+    private double percent;
+
     public Account()
     {
-        CurrentBalance = new Balance();
+        balance = new Balance();
     }
 
     public String getAccount()
     {
-        return Account;
+        return account;
     }
 
     public boolean getIsCredit()
     {
-        return IsCredit;
+        return isCredit;
     }
 
-    public String getCurrencyIsoCode()
+    public CurrencyIsoCode getCurrencyIsoCode()
     {
-        return CurrentBalance.getCurrencyIsoCode();
+        return balance.getCurrencyIsoCode();
     }
 
-    public void setCurrencyIsoCode(String Value)
+    public void setCurrencyIsoCode(CurrencyIsoCode Value)
     {
-        CurrentBalance.setCurrencyIsoCode(Value);
-    }
-
-    public int getCurrencyCode()
-    {
-        return CurrentBalance.getCurrencyCode();
+        balance.setCurrencyIsoCode(Value);
     }
 
     /* Percent on remainder or debt */
-    public float GetPercent()
+    public double GetPercent()
     {
-        return Percent;
+        return percent;
     }
 
     public BigDecimal getAvailableCash()
     {
-        return CurrentBalance.getAvailableCash();
+        return balance.getAvailableCash();
     }
 
     public void setAvailableCash(BigDecimal Value)
     {
-        CurrentBalance.setAvailableCash(Value);
+        balance.setAvailableCash(Value);
     }
 
-    private Balance CurrentBalance;
-    private int ClientNumber;
-    private String Account;
-    private ArrayList<Card> Cards;
-    private boolean IsCredit;
-    private BigDecimal CreditLimit;
-    /* Percent on remainder or debt */
-    private float Percent;
 }

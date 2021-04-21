@@ -1,17 +1,18 @@
 package ru.sber.lesson5.ATM.Transport;
 
 import lombok.Data;
+import ru.sber.lesson5.ATM.Model.CurrencyIsoCode;
 
 @Data
 public class AuthResponse {
 
-    public AuthResponse(String codeResult)
+    public AuthResponse(AuthResponseResult codeResult)
     {
-        CodeResult = codeResult;
+        this.codeResult = codeResult;
     }
 
-    private String CodeResult;
-    private String Account;
-    private String Balance;
-    private String CurrencyCodeIso;
+    private AuthResponseResult codeResult;
+    private String account;
+    private String balance;
+    private CurrencyIsoCode currencyCodeIso;
 }

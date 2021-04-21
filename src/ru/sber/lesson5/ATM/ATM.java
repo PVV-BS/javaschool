@@ -1,14 +1,13 @@
 package ru.sber.lesson5.ATM;
 
-import ru.sber.lesson5.Card.Card;
-import ru.sber.lesson5.Card.Operation;
+import ru.sber.lesson5.ATM.Model.Operation;
 
 import java.math.BigDecimal;
 
 // TODO: exceptions
 
 public interface ATM {
-    Operation pushCash(BigDecimal summa);
-    Operation pullCash(BigDecimal summa);
+    Operation pushCash(BigDecimal Amount);
+    Operation pullCash(BigDecimal Amount);
     BigDecimal getBalance();
 }

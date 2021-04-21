@@ -3,24 +3,26 @@ package ru.sber.lesson5.ATM;
 
 import java.math.BigDecimal;
 import java.lang.*;
-import java.util.Objects;
 
-import ru.sber.lesson5.Card.Card;
-import ru.sber.lesson5.Card.Operation;
+import ru.sber.lesson5.ATM.Model.Card;
+import ru.sber.lesson5.ATM.Model.Operation;
 
 public class DefaultATM implements ATM {
+
+    private Card CurrentCard;
+
 
     public Card getCurrentCard() {
         return CurrentCard;
     }
 
     @Override
-    public Operation pushCash(BigDecimal summa) {
+    public Operation pushCash(BigDecimal Amount) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public Operation pullCash(BigDecimal summa) {
+    public Operation pullCash(BigDecimal Amount) {
         throw new UnsupportedOperationException();
     }
 
@@ -46,7 +48,5 @@ public class DefaultATM implements ATM {
 
         CurrentCard = null;
     }
-
-    private Card CurrentCard;
 
 }
