@@ -37,13 +37,13 @@ public class DefaultATM implements ATM {
     }
 
     // need to subscribe on events of a device
-    private void EventCardInsert(Card card)
+    private void eventCardInsert(Card card)
     {
         if (DoAuthorization (card))
             CurrentCard = card;
     }
 
-    private void EventCardEject()
+    private void eventCardEject()
     {
 
         CurrentCard = null;
