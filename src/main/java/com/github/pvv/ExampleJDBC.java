@@ -33,10 +33,7 @@ public class ExampleJDBC {
         try(Connection connection = getConnection().orElseThrow(JDBCConnectionException::new)) {
             try(Statement statement = connection.createStatement()) {
                 try(ResultSet resultSet = statement.executeQuery("select name, age from animal")) {
-                    Integer count = new Integer(0);
-
                     while (resultSet.next()) {
-                        count = count + 1;
                         consumer.accept("Name: " + resultSet.getString("NAME") + ", age: " + resultSet.getString("age"));
                     }
                 }
