@@ -1,0 +1,143 @@
+body {
+    background-image: url("/images/background.jpg"); /* Путь к фоновому изображению */
+    background-size: cover;
+}
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+body {
+  background-color: #222;
+}
+.plate {
+  width: 75%;
+  height: 40%;
+  margin: 0% auto;
+  opacity: 1.5;
+}
+.shadow {
+  color: #fff;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin:0;
+  text-align: center;
+}
+.script {
+  font-family: "Seaweed Script";
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin:0;
+}
+.script span {
+  background-color: #222;
+  padding: 0 0.3em;
+}
+.script:before {
+  content:"";
+  display: block;
+  position: absolute;
+  z-index:-1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+}
+.text1 {
+  font-size: 40px;
+}
+.text2 {
+  font-size: 70px;
+}
+.text3 {
+  font-size: 40px;
+}
+
+#rectangle_center {
+    margin: auto;
+    padding: 5px;
+    width: 60%;
+    height: 40%;
+    background: #4da1f7;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.rect_200x30
+{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.rect_content
+{
+    background: #64db6f;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+.error_message
+{
+    color: #ff0000;
+    font-size: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: red;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.service
+{
+    width: 40%;
+    height: 30px;
+    font-size: 20px;
+	border: 1px solid red;
+	border-radius: 5px;
+	background: orange;
+}
+
+.balance
+{
+    width: 40%;
+    height: auto;
+    font-size: 20px;
+	border: 1px solid red;
+	border-radius: 5px;
+	background: white;
+	text-align: center;
+	align-items: center;
+	align: center;
+}
+
+
+.service_td {
+   border: 1px solid grey;
+   width: 100%;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Please, enter your pin code</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/atm.css" th:href="@{/css/atm.css}" />
+</head>
+<body>
+
+<div class="plate">
+  <p class="script"><span>Bank of the World</span></p>
+  <br>
+  <p class="shadow text1">'THE ROCK'</p>
+  <p class="shadow text2">WE ARE STORING YOUR TREASURES</p>
+  <p class="shadow text3">AND YOUR CONFIDENCE</p>
+  <br>
+  <p class="script"><span>The World of our Bank</span></p>
+</div>
+
+<p>
+<div id="rectangle_center" align="center" >
+    <h1 color=#001100>Please, enter your pin code:</h1>
+
+    <form action="verifyCode">
+      <fieldset>
+        <input id="account" name="account" type="hidden" value="11111111111111111111">
+        <p> <input class="rect_200x30" type="password" name="pinCode" inputmode="numeric" maxlength="4" autofocus /> </p>
+        <div class="error_message" th:insert="${session.error_log} ? ~{message::message(${session.error_log})} : ~{}"></div>
+        <p> <input class="rect_200x30" type="submit" id="submit" name="submit" value="Enter" formmethod="get" /> </p>
+      </fieldset>
+    </form>
+</div>
+</p>
+
+</body>
+</html>

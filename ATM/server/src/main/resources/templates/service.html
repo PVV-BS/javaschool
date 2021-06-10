@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="service(srv)">
+    <input class="service" id="submit" name="service" type="submit" th:value="${srv}" formmethod="get"/>
+</div>
+
+</body>
+
+</html>
