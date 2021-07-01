@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your balance</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/atm.css" th:href="@{/css/atm.css}" />
+</head>
+<body>
+<div class="rect_content">
+    <div align="center" display="flex">
+    <div class="balance" align="center" >
+        <span th:text="${session.client.name}"!>Name</span>, your balance is<br>
+        <div> <font size="40px">  <span th:text="${session.balance}">0</span> <span th:text="${session.account.currency}"></span></font> </div>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
